@@ -1,0 +1,25 @@
+Neural Network Model Report
+
+1. Overview of the analysis
+      According to the background section of the challenge, the nonprofit foundation Alphabet Soup wants a tool that can help it select the applicants for funding with the best chance of success in their ventures. 
+The the purpose of this analysis was to take the features in the provided dataset to create a binary classifier that can predict whether applicants will be successful if funded by Alphabet Soup.
+
+2. Results: 
+    a.  Data Preprocessing
+        - The target variable for the model is the column, "IS_SUCCESSFUL" from the dataframe called application_df. 
+        - The feature variables were most of the remaining columns from application_df once the column "IS_SUCCESSFUL' was dropped.
+        - The variables that should be removed from the input data because they are neither targets nor features are the columns "EIN" AND "NAME". Once these columns were dropped the rest of the columns were 
+          the feature variables.
+
+    b. Compiling, Training, and Evaluating the Model
+        - Initially, I used 10 hidden nodes in layer 1, 8 hidden nodes in layer 2, and two different activation functions, relu for the hidden layers and sigmoid for the outer layer. 
+          I selected the number of neurons at random and followed the directions for determining the rest of the needed amount of layers and functions. For optimizations, I also selected the number of nodes at 
+          random.
+        - I did not acheive the target model performance of 75%.
+        - The steps that I took in my attempts to increase the model performance were add more layers and hidden nodes. It's now dawning on me that I could have made additional changes such as dropped more columns,
+          and change the activation functions. For this practice with neural network models, one of my goals was to make conservative changes so not to confuse myself. In the future, I'd make bigger changes.
+
+3. Summary
+        The overall results of the deep learning model was about a 73% accuracy rate at predicting the whether applicants will be successfule if funded by Alphabet Soup.
+A couple of recommendations for a different model that could solve this classification problem include better data quality because having high-quality data for training, validation, and testing, that is clean 
+could enhance model performance. Additionally, stopping early could help to prevent overfitting. 
